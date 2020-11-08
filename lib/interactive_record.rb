@@ -4,9 +4,7 @@ require 'active_support/inflector'
 class InteractiveRecord
   
   def self.table_name
-    sql = <<-SQL
-      CREATE TABLE 
-    SQL
+   self.to_s.downcase.pluralize
   end 
   
   
